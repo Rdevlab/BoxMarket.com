@@ -1,7 +1,7 @@
-const mobileMenu = document.querySelector(".mobileMenu");
-const showMenuBtn = document.querySelector(".mobileMenuBtn");
-showMenuBtn.addEventListener("click", () => {
-  mobileMenu.classList.toggle("transform-[translatey(-150%)]");
-  mobileMenu.classList.toggle("h-screen");
-  showMenuBtn.classList.toggle("rotate-180");
+const menubtn = document.querySelectorAll(".mobileMenu button");
+const menubtntext = document.querySelectorAll(".mobileMenu button span");
+menubtn.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    btn.classList.toggle("mobileMenuActive");
+  });
 });

@@ -17,8 +17,8 @@
       class="w-full h-screen bg-gradient-to-b from-white via-[var(---lightgreen)] to-white overflow-hidden">
       <!-- navbar -->
       <nav
-        class="flex justify-between items-center px-8 py-4 fixed top-4 left-4 right-4 shadow-xl backdrop-blur-sm rounded-full bg-[var(---lightgreen)]/50 z-50">
-        <div class="md:font-bold md:text-2xl text-xl text-[var(---green)] select-none">
+        class="flex justify-between items-center px-8 md:py-4 xl:py-4 py-2 fixed top-4 left-4 right-4 shadow-xl backdrop-blur-sm rounded-full bg-[var(---lightgreen)]/50 z-50">
+        <div class="md:font-bold md:text-2xl text-2xl font-bold text-[var(---green)] select-none">
           BoxMarket.com
         </div>
 
@@ -37,53 +37,59 @@
           class="md:flex xl:flex hidden flex-col md:flex-row xl:flex-row md:gap-2 xl:gap-2 gap-4 text-[var(---green)] text-lg">
           <button
             class="flex items-center gap-2 cursor-pointer px-4 py-1 hover:bg-[var(---lightgreen)] hover:text-[var(---orange)] rounded-full transition-all duration-300">
-            <i class="fas fa-filter"></i> Categories
+            <i class="fas fa-home"></i> Home
           </button>
 
           <button
             class="flex items-center gap-2 cursor-pointer px-4 py-1 hover:bg-[var(---lightgreen)] hover:text-[var(---orange)] rounded-full transition-all duration-300">
-            <i class="fa-regular fa-user"></i> sign in
+            <i class="fa-regular fa-bell"></i> Notifications
           </button>
 
           <button
             class="flex items-center gap-2 cursor-pointer px-4 py-1 hover:bg-[var(---lightgreen)] hover:text-[var(---orange)] rounded-full transition-all duration-300">
-            <i class="fas fa-shopping-cart"></i>Cart
+            <i class="fas fa-heart"></i>Favorites
           </button>
 
           <button
             class="flex items-center gap-2 cursor-pointer px-4 py-1 bg-[var(---lightgreen)] hover:text-[var(---orange)] rounded-full transition-all duration-300 shadow-lg">
-            <i class="fa-regular fa-user"></i>Creat Account
+            <i class="fa-regular fa-user"></i>Account
           </button>
         </div>
 
         <!-- showmenue -->
         <button
           class="flex cursor-pointer justify-center items-center p-4 md:hidden xl:hidden bg-white rounded-full mobileMenuBtn transition-all duration-700">
-          <i class="fas fa-search"></i>
+          <i class="fas fa-bars"></i>
         </button>
       </nav>
 
       <!-- mobile menue -->
       <div
-        class="flex justify-evenly md:hidden xl:hidden gap-4 text-[var(---green)] fixed bottom-0 left-0 right-0 py-4 text-xl bg-[var(---lightgreen)] z-50">
-        <button
-          class="flex items-center gap-2 cursor-pointer px-4 py-1 hover:bg-[var(---lightgreen)] hover:text-[var(---orange)] rounded-full transition-all duration-300">
-          <i class="fas fa-filter"></i>
-        </button>
+        class="flex justify-evenly md:hidden xl:hidden gap-4 text-[var(---green)] fixed bottom-0 left-0 right-0 py-4 text-xl z-50">
+        <div
+          class="mobileMenu flex rounded-full bg-[var(---lightgreen)] w-full justify-evenly items-center py-2">
+          <button
+            class="flex items-center gap-2 cursor-pointer px-4 py-1 hover:bg-[var(---lightgreen)] hover:text-[var(---orange)] rounded-full transition-all duration-300">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+          </button>
 
-        <button
-          class="flex items-center gap-2 cursor-pointer px-4 py-1 hover:bg-[var(---lightgreen)] hover:text-[var(---orange)] rounded-full transition-all duration-300">
-          <i class="fa-regular fa-user"></i>
-        </button>
+          <button
+            class="flex items-center gap-2 cursor-pointer px-4 py-1 hover:bg-[var(---lightgreen)] hover:text-[var(---orange)] rounded-full transition-all duration-300">
+            <i class="fas fa-bell"></i>
+            <span class="hidden">notication</span>
+          </button>
 
+          <button
+            class="flex items-center gap-2 cursor-pointer px-4 py-1 hover:bg-[var(---lightgreen)] hover:text-[var(---orange)] rounded-full transition-all duration-300">
+            <i class="fa-regular fa-heart"></i>
+            <span class="hidden"> favorites </span>
+          </button>
+        </div>
         <button
           class="flex items-center gap-2 cursor-pointer px-4 py-1 hover:bg-[var(---lightgreen)] hover:text-[var(---orange)] rounded-full transition-all duration-300">
           <i class="fas fa-shopping-cart"></i>
-        </button>
-
-        <button
-          class="flex items-center gap-2 cursor-pointer px-4 py-1 bg-[var(---lightgreen)] hover:text-[var(---orange)] rounded-full transition-all duration-300 shadow-lg">
-          <i class="fa-regular fa-user"></i>Creat
+          <span class="hidden">Cart</span>
         </button>
       </div>
 

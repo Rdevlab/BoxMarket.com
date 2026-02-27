@@ -27,3 +27,7 @@
     transform: translateX(calc(-100% * 4));
   }
 }
+
+.mobileMenuActive span {
+  display: flex;
+}
