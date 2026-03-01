@@ -1,6 +1,6 @@
 setTimeout(() => {
   document.querySelector(".loader").classList.add("hidden");
-}, 2000);
+}, 700);
 
 const menubtn = document.querySelectorAll(".mobileMenu button");
 menubtn.forEach((btn) => {
@@ -24,8 +24,8 @@ burgerBtn.addEventListener("click", () => {
 });
 
 // slider js
-const slider = document.querySelector(".slider");
-const slidesContainer = document.querySelector(".slides");
+const slider = document.querySelector("#slider");
+const slidesContainer = document.querySelector("#slides");
 const slides = document.querySelectorAll(".slide");
 const prevBtn = document.querySelector(".prev");
 const nextBtn = document.querySelector(".next");
