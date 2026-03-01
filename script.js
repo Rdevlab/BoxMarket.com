@@ -1,6 +1,6 @@
 setTimeout(() => {
   document.querySelector(".loader").classList.add("hidden");
-}, 700);
+}, 2000);
 
 const menubtn = document.querySelectorAll(".mobileMenu button");
 menubtn.forEach((btn) => {
