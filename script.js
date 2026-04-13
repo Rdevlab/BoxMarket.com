@@ -1,6 +1,6 @@
 setTimeout(() => {
   document.querySelector(".loader").classList.add("hidden");
-}, 1000);
+}, 20000);
 
 const menubtn = document.querySelectorAll(".mobileMenu button");
 menubtn.forEach((btn) => {
@@ -397,9 +397,11 @@ suppliers.forEach((supplier) => {
 });
 
 //sign in page
-
-const signPage = document.querySelector("#singInPage");
-isSubmitted = false;
-if (isSubmitted) {
-  signPage.classList.add("hidden");
-}
+const signInEmail = document.querySelector("#signUsername");
+const signInPassword = document.querySelector("#signPassword");
+const signInBtn = document.querySelector("#submmitSignIn");
+signInBtn.addEventListener("click", () => {
+  if (signInEmail.value === "admin@gmail.com" && signInPassword.value === "admin") {
+    document.querySelector("#singInPage").classList.add("hidden");
+  }
+});

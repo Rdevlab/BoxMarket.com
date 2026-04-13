@@ -57,7 +57,7 @@
             id="formsContainer">
             <!-- sgin in option -->
             <div class="flex flex-col h-full gap-4 w-1/2">
-              <form action="#" class="flex flex-col gap-4">
+              <form action="#" class="flex flex-col gap-4" id="signInForm">
                 <!-- usrname input -->
                 <div class="flex flex-col gap-1">
                   <label for="username">Mobile Number or E-mail</label>
@@ -67,7 +67,7 @@
                     <input
                       type="text"
                       placeholder="Eg-hello@gmail.com"
-                      id="username"
+                      id="signUsername"
                       required
                       class="outline-none" />
                   </span>
@@ -82,7 +82,7 @@
                       type="password"
                       placeholder="password"
                       required
-                      id="password"
+                      id="signPassword"
                       class="outline-none w-full" />
 
                     <i class="fas fa-eye cursor-pointer" id="showpassword"></i>
@@ -99,6 +99,7 @@
                 <input
                   type="submit"
                   value="Sign In"
+                  id="submmitSignIn"
                   class="w-full rounded-lg bg-[var(--color1)] p-2 text-lg font-semibold text-white cursor-pointer" />
               </form>
               <!-- social media login -->
@@ -128,7 +129,7 @@
             </div>
             <!-- sign up option -->
             <div class="flex flex-col h-full justify-between w-1/2">
-              <form action="#" class="flex flex-col gap-4">
+              <form action="#" class="flex flex-col gap-4" id="signUpForm">
                 <!-- usrname input -->
                 <div class="flex flex-col gap-1">
                   <label for="signUpuserName">User Name</label>
