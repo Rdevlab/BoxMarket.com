@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link
       rel="stylesheet"
@@ -251,7 +250,7 @@
         class="md:flex xl:flex hidden flex-col md:flex-row xl:flex-row md:gap-2 xl:gap-2 gap-4 text-[var(---darkGreen)] text-lg">
         <button
           class="flex items-center gap-2 cursor-pointer px-4 py-1 hover:bg-[var(---lightgreen)] hover:text-[var(---orange)] rounded-full transition-all duration-300">
-          <i class="fa-regular fa-home"></i> Home
+          <a href="#home"><i class="fa-regular fa-home"></i> Home</a>
         </button>
 
         <button
@@ -260,7 +259,7 @@
         </button>
         <button
           class="flex items-center gap-2 cursor-pointer px-4 py-1 hover:bg-[var(---lightgreen)] hover:text-[var(---orange)] rounded-full transition-all duration-300">
-          <i class="fa-regular fa-bell"></i> Notifications
+          <a href="./htmls/categories/categories.html"><i class="fas fa-list"></i> Categories</a>
         </button>
 
         <button
@@ -336,6 +335,7 @@
 
       <!-- hero section -->
       <section
+        id="home"
         class="w-full h-full md:py-40 md:px-24 xl:py-20 xl:px-24 px-10 py-28 flex md:flex-row xl:flex-row justify-center items-center flex-col md:gap-20 xl:gap-20 gap-4">
         <div class="flex flex-col md:gap-4 xl:gap-4 gap-0 md:max-w-1/2 xl:max-w-1/2">
           <h1

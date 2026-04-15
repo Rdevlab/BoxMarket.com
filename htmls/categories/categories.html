@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BoxMarket || Categories</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body class="font-sans bg-[var(---darkGreen)]">
+    <section
+      class="relative w-full h-[65vh] md:h-[70vh] rounded-b-full overflow-hidden bg-[url('../../images/background-blur.png')] bg-cover bg-center">
+      <div class="w-full h-full absolute bg-black/30 rounded-b-full"></div>
+
+      <header class="fixed top-0 left-0 w-full flex justify-between items-center p-6">
+        <a
+          href="../../index.html"
+          class="flex gap-4 items-center px-4 py-1 rounded-full bg-white/50 backdrop-blur-md">
+          <img class="h-12" src="../../images/logo.png" alt="Logo" />
+          <h1 class="font-bold text-2xl text-[var(---darkGreen)] drop-shadow-black drop-shadow-xl">
+            BoxMarket.com
+          </h1>
+        </a>
+        <article
+          class="flex text-xl px-4 py-1 rounded-full bg-white/50 backdrop-blur-md items-center gap-2 font-bold text-[var(---darkGreen)]">
+          <h1>hi, i'm Felany</h1>
+          <img src="#" alt="" class="h-12 w-12 rounded-full border" />
+        </article>
+      </header>
+
+      <article
+        class="absolute top-[38%] left-1/2 -translate-x-1/2 text-center text-white w-full px-4">
+        <h1 class="text-2xl md:text-4xl font-bold mb-4">Looking for Special products</h1>
+
+        <div class="flex justify-center overflow-visible">
+          <div
+            class="search-container bg-white flex items-center px-4 py-2 rounded-full w-[280px] md:w-[350px] shadow-lg overflow-visible">
+            <input
+              id="searchInput"
+              type="text"
+              placeholder="Search categories..."
+              class="outline-none text-gray-700 w-full" />
+            <i class="fa fa-search text-gray-600"></i>
+            <div id="searchDropdown" class="search-dropdown z-30"></div>
+          </div>
+        </div>
+
+        <div class="mt-6 flex justify-center gap-4">
+          <button
+            class="bg-[var(---lightgreen)] px-6 py-2 rounded-full shadow hover:scale-105 transition text-[var(---darkGreen)]">
+            Explore
+          </button>
+          <button
+            class="bg-[var(---orange)] px-6 py-2 rounded-full shadow hover:scale-105 transition text-[var(---lightGreen)]">
+            Products
+          </button>
+        </div>
+      </article>
+    </section>
+
+    <section class="w-full px-6 md:px-10 mt-12">
+      <div class="flex justify-between items-center">
+        <h3 class="font-semibold text-[var(---orange)] mb-3">Our New Collection</h3>
+        <span class="cursor-pointer mr-10 hover:opacity-80 transition text-[var(---darkGreen)] mb-3"
+          >Product</span
+        >
+      </div>
+
+      <article class="grid grid-cols-2 md:grid-cols-4 gap-6 mx-auto">
+        <div
+          class="bg-[var(---lightgreen)] p-4 rounded-xl shadow hover:shadow-xl hover:-translate-y-1 transition duration-300 max-w-[200px]">
+          <div class="h-24 rounded mb-3">
+            <img class="w-full h-full object-cover rounded border" src="" alt="Product" />
+          </div>
+          <h4 class="text-sm font-medium text-[var(---darkGreen)]">care</h4>
+          <div class="flex justify-between mt-2">
+            <span class="font-bold text-[var(---orange)]">$8000</span>
+            <button
+              class="bg-[var(---green)] text-white text-xs px-3 py-1 rounded-full hover:opacity-90 transition">
+              Add
+            </button>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <script>
+      const categories = [
+        { name: "Consumer Electronics", icon: "fa-headphones" },
+        { name: "Home & Kitchen", icon: "fa-utensils" },
+        { name: "Food & Beverages", icon: "fa-hamburger" },
+        { name: "Health & Personal Care", icon: "fa-user-md" },
+        { name: "Beauty", icon: "fa-magic" },
+        { name: "Fashion & Apparel", icon: "fa-tshirt" },
+        { name: "Baby & Kids", icon: "fa-baby" },
+        { name: "Sports & Outdoors", icon: "fa-basketball-ball" },
+        { name: "Home Appliances", icon: "fa-tv" },
+        { name: "Office & School", icon: "fa-pencil-alt" },
+        { name: "Automotive", icon: "fa-car" },
+        { name: "Pet Supplies", icon: "fa-paw" },
+      ];
+
+      const searchInput = document.getElementById("searchInput");
+      const searchDropdown = document.getElementById("searchDropdown");
+
+      searchInput.addEventListener("focus", function () {
+        renderResults(categories, "");
+        searchDropdown.classList.add("active");
+      });
+
+      searchInput.addEventListener("input", function () {
+        const query = this.value.toLowerCase().trim();
+
+        if (query === "") {
+          renderResults(categories, "");
+        } else {
+          const filtered = categories.filter((cat) => cat.name.toLowerCase().includes(query));
+          renderResults(filtered, query);
+        }
+
+        searchDropdown.classList.add("active");
+      });
+
+      document.addEventListener("click", function (e) {
+        if (!e.target.closest(".search-container")) {
+          searchDropdown.classList.remove("active");
+        }
+      });
+
+      function renderResults(items, query) {
+        if (items.length === 0) {
+          searchDropdown.innerHTML =
+            '<div class="no-results"><i class="fa fa-search mb-2"></i><br>No categories found</div>';
+          return;
+        }
+
+        searchDropdown.innerHTML = items
+          .map((item) => {
+            let displayName = item.name;
+            if (query) {
+              const regex = new RegExp(`(${query})`, "gi");
+              displayName = item.name.replace(regex, '<span class="search-highlight">$1</span>');
+            }
+
+            return `
+                    <div class="search-item" onclick="selectCategory('${item.name}')">
+                        <div class="search-item-icon">
+                            <i class="fa ${item.icon}"></i>
+                        </div>
+                        <span class="search-item-text">${displayName}</span>
+                        <i class="fa fa-chevron-right search-item-arrow"></i>
+                    </div>
+                `;
+          })
+          .join("");
+      }
+
+      function selectCategory(categoryName) {
+        searchInput.value = categoryName;
+        searchDropdown.classList.remove("active");
+        console.log("Selected category:", categoryName);
+      }
+    </script>
+  </body>
+</html>

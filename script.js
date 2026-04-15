@@ -1,6 +1,6 @@
 setTimeout(() => {
   document.querySelector(".loader").classList.add("hidden");
-}, 20000);
+}, 1000);
 
 const menubtn = document.querySelectorAll(".mobileMenu button");
 menubtn.forEach((btn) => {
@@ -144,6 +144,7 @@ const products = [
     productColor: "black",
     productAmountNumber: 14,
     categorey: "consumer",
+    productShipping: "free",
   },
   {
     productImage: "./images/products/01-consumer-electronics/harddisk.png",
@@ -156,6 +157,7 @@ const products = [
     productColor: "black",
     productAmountNumber: 14,
     categorey: "",
+    productShipping: "free",
   },
   {
     productImage: "./images/products/01-consumer-electronics/harddisk.png",
@@ -168,6 +170,7 @@ const products = [
     productColor: "black",
     productAmountNumber: 14,
     categorey: "",
+    productShipping: "free",
   },
   {
     productImage: "./images/products/01-consumer-electronics/harddisk.png",
@@ -180,6 +183,7 @@ const products = [
     productColor: "black",
     productAmountNumber: 14,
     categorey: "",
+    productShipping: "free",
   },
   {
     productImage: "./images/products/01-consumer-electronics/harddisk.png",
@@ -192,6 +196,7 @@ const products = [
     productColor: "black",
     productAmountNumber: 14,
     categorey: "consumer",
+    productShipping: "free",
   },
   {
     productImage: "./images/products/01-consumer-electronics/harddisk.png",
@@ -204,6 +209,7 @@ const products = [
     productColor: "black",
     productAmountNumber: 14,
     categorey: "consumer",
+    productShipping: "free",
   },
   {
     productImage: "./images/products/01-consumer-electronics/harddisk.png",
@@ -216,6 +222,7 @@ const products = [
     productColor: "black",
     productAmountNumber: 14,
     categorey: "consumer",
+    productShipping: "free",
   },
   {
     productImage: "./images/products/01-consumer-electronics/harddisk.png",
@@ -228,6 +235,7 @@ const products = [
     productColor: "black",
     productAmountNumber: 14,
     categorey: "consumer",
+    productShipping: "free",
   },
 ];
 const suppliers = [
@@ -239,7 +247,6 @@ const suppliers = [
     supplierInfo: "a short info about supplier",
     supplierProduct: "200",
     supplierCategory: "housing",
-    supplierShipping: "free",
   },
   {
     supplierID: 2,
@@ -249,7 +256,6 @@ const suppliers = [
     supplierInfo: "a short info about supplier",
     supplierProduct: "200",
     supplierCategory: "housing",
-    supplierShipping: "free",
   },
   {
     supplierID: 3,
@@ -259,7 +265,6 @@ const suppliers = [
     supplierInfo: "a short info about supplier",
     supplierProduct: "200",
     supplierCategory: "housing",
-    supplierShipping: "free",
   },
   {
     supplierID: 4,
@@ -269,7 +274,6 @@ const suppliers = [
     supplierInfo: "a short info about supplier",
     supplierProduct: "200",
     supplierCategory: "housing",
-    supplierShipping: "free",
   },
   {
     supplierID: 5,
@@ -279,7 +283,6 @@ const suppliers = [
     supplierInfo: "a short info about supplier",
     supplierProduct: "200",
     supplierCategory: "housing",
-    supplierShipping: "free",
   },
   {
     supplierID: 6,
@@ -289,7 +292,6 @@ const suppliers = [
     supplierInfo: "a short info about supplier",
     supplierProduct: "200",
     supplierCategory: "housing",
-    supplierShipping: "free",
   },
   {
     supplierID: 7,
@@ -299,7 +301,6 @@ const suppliers = [
     supplierInfo: "a short info about supplier",
     supplierProduct: "200",
     supplierCategory: "housing",
-    supplierShipping: "free",
   },
 ];
 
